@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.MVC", "TempHire.MVC\TempHire.MVC.csproj", "{D66F3587-95D6-4C4D-9C3B-9816235D975B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.MVC.Tests", "TempHire.MVC.Tests\TempHire.MVC.Tests.csproj", "{2D8B1266-3838-46BB-8DCF-56D59C1C2440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.DomainModel", "TempHire.DomainModel\TempHire.DomainModel.csproj", "{4440785A-4DD1-4712-971B-7FC7D1C37232}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D66F3587-95D6-4C4D-9C3B-9816235D975B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66F3587-95D6-4C4D-9C3B-9816235D975B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66F3587-95D6-4C4D-9C3B-9816235D975B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66F3587-95D6-4C4D-9C3B-9816235D975B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8B1266-3838-46BB-8DCF-56D59C1C2440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8B1266-3838-46BB-8DCF-56D59C1C2440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8B1266-3838-46BB-8DCF-56D59C1C2440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8B1266-3838-46BB-8DCF-56D59C1C2440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4440785A-4DD1-4712-971B-7FC7D1C37232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4440785A-4DD1-4712-971B-7FC7D1C37232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4440785A-4DD1-4712-971B-7FC7D1C37232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4440785A-4DD1-4712-971B-7FC7D1C37232}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
