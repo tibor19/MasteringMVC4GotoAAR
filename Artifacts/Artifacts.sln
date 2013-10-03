@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artifacts", "Artifacts\Artifacts.csproj", "{26B07F02-0F15-4F62-933F-1D77931E7494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.DomainModel", "TempHire.DomainModel\TempHire.DomainModel.csproj", "{7EC758FB-DD48-49C1-9532-0B42048FD4E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.Dal.EF", "TempHire.Dal.EF\TempHire.Dal.EF.csproj", "{C4E6F842-D94A-4E56-89EC-973221173AE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26B07F02-0F15-4F62-933F-1D77931E7494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B07F02-0F15-4F62-933F-1D77931E7494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B07F02-0F15-4F62-933F-1D77931E7494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B07F02-0F15-4F62-933F-1D77931E7494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
