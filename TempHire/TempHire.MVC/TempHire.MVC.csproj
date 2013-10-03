@@ -198,7 +198,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AddressTypeController.cs" />
@@ -334,6 +334,8 @@
     <Content Include="Views\StaffingResource\Edit.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\StaffingResource.cshtml" />
     <Content Include="Views\StaffingResource\Create.cshtml" />
+    <Content Include="Views\Home\Index.mobile.cshtml" />
+    <Content Include="Views\Home\Index.IPad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
