@@ -13,9 +13,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace TempHire.DomainModel
 {
+    [DataContract]
     public class AddressType : EntityBase
     {
         public AddressType()
@@ -26,21 +28,25 @@ namespace TempHire.DomainModel
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
+        [DataMember(IsRequired = true)]
         public Guid Id { get; set; }
 
         /// <summary>Gets or sets the Name. </summary>
 
         [Required]
+        [DataMember(IsRequired = true)]
         public string Name { get; set; }
 
         /// <summary>Gets or sets the DisplayName. </summary>
 
         [Required]
+        [DataMember(IsRequired = true)]
         public string DisplayName { get; set; }
 
         /// <summary>Gets or sets the Default. </summary>
 
         [Required]
+        [DataMember(IsRequired = true)]
         public bool Default { get; set; }
     }
 }
