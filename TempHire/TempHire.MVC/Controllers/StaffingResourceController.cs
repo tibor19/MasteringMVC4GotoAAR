@@ -77,19 +77,20 @@ namespace TempHire.MVC.Controllers
         // POST: /Person/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Guid id, StaffingResourceEdit person)
+        public ActionResult Edit(StaffingResourceEdit personEdit)
         {
             try
             {
-                // var person = _unitOfWork.StaffingResources.GetById(id);
-                //if (person == null)
-                //{
-                //    return HttpNotFound();
-                //}
+                var person = _unitOfWork.StaffingResources.GetById(personEdit.Id);
+                if (person == null)
+                {
+                    return HttpNotFound();
+                }
 
-                //person.FirstName = collection.Get("FirstName");
-                //person.LastName = collection.Get("LastName");
-                //person.MiddleName = collection.Get("MiddleName");
+                person.FirstName = personEdit.FirstName;
+                person.LastName = personEdit.LastName;
+                person.MiddleName = personEdit.MiddleName;
+                person.Summary = personEdit.Summary;
 
                 //person
                 _unitOfWork.Context.Entry(person).State = EntityState.Modified;
@@ -97,7 +98,7 @@ namespace TempHire.MVC.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception e)
             {
                 return View();
             }
