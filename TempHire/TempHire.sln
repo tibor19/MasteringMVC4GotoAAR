@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.MVC.Tests", "TempH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.DomainModel", "TempHire.DomainModel\TempHire.DomainModel.csproj", "{7EC758FB-DD48-49C1-9532-0B42048FD4E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempHire.Dal.EF", "TempHire.Dal.EF\TempHire.Dal.EF.csproj", "{C4E6F842-D94A-4E56-89EC-973221173AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EC758FB-DD48-49C1-9532-0B42048FD4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E6F842-D94A-4E56-89EC-973221173AE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

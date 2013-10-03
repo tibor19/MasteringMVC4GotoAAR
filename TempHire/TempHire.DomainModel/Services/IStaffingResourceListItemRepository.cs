@@ -3,8 +3,8 @@ using TempHire.DomainModel.Projections;
 
 namespace TempHire.DomainModel.Services
 {
-    public interface IStaffingResourceListItemRepository : IRepository<object>
+    public interface IStaffingResourceListItemRepository
     {
-        // IQueryable<object> All();
+        IQueryable<object> All();
     }
 }

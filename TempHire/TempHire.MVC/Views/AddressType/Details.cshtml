@@ -1,0 +1,43 @@
+﻿@model TempHire.DomainModel.AddressType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>AddressType</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DisplayName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DisplayName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Default)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Default)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RowVersion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RowVersion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

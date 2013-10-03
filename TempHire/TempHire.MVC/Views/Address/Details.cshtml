@@ -1,0 +1,106 @@
+﻿@model TempHire.DomainModel.Address
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Address</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StaffingResourceId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StaffingResourceId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AddressTypeId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressTypeId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Zipcode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Zipcode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Primary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Primary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StateId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StateId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreatedUser)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedUser)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Modified)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Modified)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModifyUser)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyUser)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RowVersion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RowVersion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

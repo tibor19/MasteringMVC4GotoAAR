@@ -5,5 +5,7 @@ namespace TempHire.DomainModel.Services
     public interface IRepository<out T>
     {
         IQueryable<T> All();
+
+        T GetById(object key);
     }
 }
