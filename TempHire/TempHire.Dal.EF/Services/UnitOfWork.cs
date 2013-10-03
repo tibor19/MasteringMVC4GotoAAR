@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using Breeze.WebApi;
 using Breeze.WebApi.EF;
 using Newtonsoft.Json.Linq;
@@ -40,6 +41,12 @@ namespace TempHire.Dal.EF.Services
         public IRepository<State> States { get; private set; }
         public IRepository<WorkExperienceItem> WorkExperienceItems { get; private set; }
 
+        public DbContext Context {
+            get
+            {
+                return _context;
+            }
+        }
         public IStaffingResourceListItemRepository StaffingResourceListItems { get; private set; }
 
         public void Commit()

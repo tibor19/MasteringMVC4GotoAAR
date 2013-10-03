@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 
 namespace TempHire.DomainModel.Services
 {
@@ -13,6 +14,9 @@ namespace TempHire.DomainModel.Services
         IRepository<RateType> RateTypes { get; }
         IRepository<Skill> Skills { get; }
         IRepository<State> States { get; }
+
+        DbContext Context{ get; }
+
         IRepository<WorkExperienceItem> WorkExperienceItems { get; }
         IStaffingResourceListItemRepository StaffingResourceListItems { get; }
         void Commit();

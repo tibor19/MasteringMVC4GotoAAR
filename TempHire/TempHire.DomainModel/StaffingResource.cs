@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace TempHire.DomainModel
 {
-    public class StaffingResource : AuditEntityBase
+    public class StaffingResourceEdit : AuditEntityBase
     {
         /// <summary>Gets or sets the Id. </summary>
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -33,7 +33,10 @@ namespace TempHire.DomainModel
         [Required]
         [DataType(DataType.MultilineText)]
         public string Summary { get; set; }
+    }
 
+    public class StaffingResource : StaffingResourceEdit
+    {
         /// <summary>Gets the Addresses. </summary>
         public ICollection<Address> Addresses { get; internal set; }
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TempHire.Dal.EF.Services;
+using TempHire.DomainModel;
 using TempHire.DomainModel.Services;
 
 namespace TempHire.MVC.Controllers
@@ -75,11 +77,23 @@ namespace TempHire.MVC.Controllers
         // POST: /Person/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Guid id, FormCollection collection)
+        public ActionResult Edit(Guid id, StaffingResourceEdit person)
         {
             try
             {
-                // TODO: Add update logic here
+                // var person = _unitOfWork.StaffingResources.GetById(id);
+                //if (person == null)
+                //{
+                //    return HttpNotFound();
+                //}
+
+                //person.FirstName = collection.Get("FirstName");
+                //person.LastName = collection.Get("LastName");
+                //person.MiddleName = collection.Get("MiddleName");
+
+                //person
+                _unitOfWork.Context.Entry(person).State = EntityState.Modified;
+                _unitOfWork.Commit();
 
                 return RedirectToAction("Index");
             }
