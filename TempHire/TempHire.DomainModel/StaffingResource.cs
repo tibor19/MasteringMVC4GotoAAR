@@ -26,10 +26,12 @@ namespace TempHire.DomainModel
         /// <summary>Gets or sets the LastName. </summary>
         [Required]
         [Display(Name = "Last Name")]
+        [StringLength(25)]
         public string LastName { get; set; }
 
         /// <summary>Gets or sets the Summary. </summary>
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Summary { get; set; }
 
         /// <summary>Gets the Addresses. </summary>

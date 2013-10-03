@@ -66,16 +66,16 @@ namespace TempHire.MVC.Controllers
         //
         // GET: /Person/Edit/5
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(Guid id)
         {
-            return View();
+            return View(_unitOfWork.StaffingResources.GetById(id));
         }
 
         //
         // POST: /Person/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Guid id, FormCollection collection)
         {
             try
             {

@@ -20,21 +20,26 @@ namespace TempHire.DomainModel
     {
 
         [ConcurrencyCheck]
+        [ScaffoldColumn(false)]
         public int RowVersion { get; internal set; }
     }
 
     public abstract class AuditEntityBase : EntityBase
     {
 
+        [ScaffoldColumn(false)]
         public DateTime Created { get; set; }
 
 
+        [ScaffoldColumn(false)]
         public string CreatedUser { get; set; }
 
 
+        [ScaffoldColumn(false)]
         public DateTime Modified { get; set; }
 
 
+        [ScaffoldColumn(false)]
         public string ModifyUser { get; set; }
     }
 }
