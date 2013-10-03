@@ -310,7 +310,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TempHire.DomainModel\TempHire.DomainModel.csproj">
-      <Project>{4440785a-4dd1-4712-971b-7fc7d1c37232}</Project>
+      <Project>{7ec758fb-dd48-49c1-9532-0b42048fd4e6}</Project>
       <Name>TempHire.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
