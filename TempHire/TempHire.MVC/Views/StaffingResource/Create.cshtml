@@ -1,24 +1,20 @@
 ﻿@model TempHire.DomainModel.StaffingResource
 
-@{
-    ViewBag.Title = "Edit";
-}
-
-<h2>Edit</h2>
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Edit Staffing Resource</legend>
+        <legend>Create Staffing</legend>
 
-        @Html.HiddenFor(model => model.Id)
-        
         @Html.EditorForModel()
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Create" />
         </p>
     </fieldset>
 }
@@ -26,7 +22,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

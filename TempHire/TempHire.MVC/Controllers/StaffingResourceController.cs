@@ -16,10 +16,10 @@ namespace TempHire.MVC.Controllers
         private readonly IUnitOfWork _unitOfWork;
         //
         // GET: /Person/
-        public StaffingResourceController() : this(new UnitOfWork())
-        {
+        //public StaffingResourceController() : this(new UnitOfWork())
+        //{
             
-        }
+        //}
 
         public StaffingResourceController(IUnitOfWork unitOfWork)
         {
@@ -77,24 +77,25 @@ namespace TempHire.MVC.Controllers
         // POST: /Person/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(StaffingResourceEdit personEdit)
+        public ActionResult Edit(Guid id, FormCollection collection)
         {
+            // if(ModelState.IsValid)
             try
             {
-                var person = _unitOfWork.StaffingResources.GetById(personEdit.Id);
+                var person = _unitOfWork.StaffingResources.GetById(id);
                 if (person == null)
                 {
                     return HttpNotFound();
                 }
 
-                person.FirstName = personEdit.FirstName;
-                person.LastName = personEdit.LastName;
-                person.MiddleName = personEdit.MiddleName;
-                person.Summary = personEdit.Summary;
+                if (TryUpdateModel<StaffingResource>(person, 
+                    //new string[]{"FirstName", "LastName", "MiddleName"}, 
+                    collection))
+                {
+                    _unitOfWork.Commit();
+                }
 
                 //person
-                _unitOfWork.Context.Entry(person).State = EntityState.Modified;
-                _unitOfWork.Commit();
 
                 return RedirectToAction("Index");
             }
