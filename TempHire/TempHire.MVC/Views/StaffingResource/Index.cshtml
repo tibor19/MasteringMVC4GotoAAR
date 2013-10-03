@@ -1,0 +1,75 @@
+﻿@model IEnumerable<TempHire.DomainModel.StaffingResource>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAddress.Address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAddress.Address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAddress.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAddress.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryAddress.Zipcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAddress.Address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAddress.Address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAddress.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAddress.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryAddress.Zipcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

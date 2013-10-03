@@ -16,13 +16,16 @@ namespace TempHire.DomainModel
 
         /// <summary>Gets or sets the FirstName. </summary>
         [Required]
+        [Display(Name="First Name")]
         public string FirstName { get; set; }
 
         /// <summary>Gets or sets the MiddleName. </summary>
+        [Display(Name = "Middle Name")]
         public string MiddleName { get; set; }
 
         /// <summary>Gets or sets the LastName. </summary>
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         /// <summary>Gets or sets the Summary. </summary>

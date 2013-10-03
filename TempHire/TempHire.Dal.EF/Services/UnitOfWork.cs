@@ -1,4 +1,5 @@
-﻿using Breeze.WebApi;
+﻿using System;
+using Breeze.WebApi;
 using Breeze.WebApi.EF;
 using Newtonsoft.Json.Linq;
 using TempHire.DomainModel;
@@ -6,26 +7,26 @@ using TempHire.DomainModel.Services;
 
 namespace TempHire.Dal.EF.Services
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
-        private readonly EFContextProvider<TempHireDbContext> _contextProvider;
+        private readonly TempHireDbContext _context;
 
         public UnitOfWork()
         {
-            _contextProvider = new EFContextProvider<TempHireDbContext>();
+            _context = new TempHireDbContext();
 
-            StaffingResources = new Repository<StaffingResource>(_contextProvider.Context);
-            Addresses = new Repository<Address>(_contextProvider.Context);
-            AddressTypes = new Repository<AddressType>(_contextProvider.Context);
-            PhoneNumbers = new Repository<PhoneNumber>(_contextProvider.Context);
-            PhoneNumberTypes = new Repository<PhoneNumberType>(_contextProvider.Context);
-            Rates = new Repository<Rate>(_contextProvider.Context);
-            RateTypes = new Repository<RateType>(_contextProvider.Context);
-            Skills = new Repository<Skill>(_contextProvider.Context);
-            States = new Repository<State>(_contextProvider.Context);
-            WorkExperienceItems = new Repository<WorkExperienceItem>(_contextProvider.Context);
+            StaffingResources = new Repository<StaffingResource>(_context);
+            Addresses = new Repository<Address>(_context);
+            AddressTypes = new Repository<AddressType>(_context);
+            PhoneNumbers = new Repository<PhoneNumber>(_context);
+            PhoneNumberTypes = new Repository<PhoneNumberType>(_context);
+            Rates = new Repository<Rate>(_context);
+            RateTypes = new Repository<RateType>(_context);
+            Skills = new Repository<Skill>(_context);
+            States = new Repository<State>(_context);
+            WorkExperienceItems = new Repository<WorkExperienceItem>(_context);
 
-            StaffingResourceListItems = new StaffingResourceListItemRepository(_contextProvider.Context);
+            // StaffingResourceListItems = new StaffingResourceListItemRepository(_context);
         }
 
         public IRepository<StaffingResource> StaffingResources { get; private set; }
@@ -41,9 +42,13 @@ namespace TempHire.Dal.EF.Services
 
         public IStaffingResourceListItemRepository StaffingResourceListItems { get; private set; }
 
-        public SaveResult Commit(JObject changeSet)
+        public void Commit()
         {
-            return _contextProvider.SaveChanges(changeSet);
+            _context.SaveChanges();
+        }
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }

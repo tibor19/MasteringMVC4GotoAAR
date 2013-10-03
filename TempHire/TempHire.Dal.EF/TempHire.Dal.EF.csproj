@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Services\Repository.cs" />
-    <Compile Include="Services\StaffingResourceListItemRepository.cs" />
     <Compile Include="Services\UnitOfWork.cs" />
     <Compile Include="TempHireDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

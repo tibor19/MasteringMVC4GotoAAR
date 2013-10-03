@@ -52,6 +52,7 @@
     <Compile Include="RateType.cs" />
     <Compile Include="Services\IRepository.cs" />
     <Compile Include="Services\IStaffingResourceListItemRepository.cs" />
+    <Compile Include="Services\IUnitOfWork.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="StaffingResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

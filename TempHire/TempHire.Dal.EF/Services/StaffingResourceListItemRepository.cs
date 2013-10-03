@@ -1,6 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using TempHire.DomainModel;
+using TempHire.DomainModel.Projections;
 using TempHire.DomainModel.Services;
 
 namespace TempHire.Dal.EF.Services
@@ -11,16 +14,23 @@ namespace TempHire.Dal.EF.Services
         {
         }
 
+        private class TempObject
+        {
+            public StaffingResource StaffingResource { get; set; }
+            public Address PrimaryAddress { get; set; }
+            public PhoneNumber PrimaryPhoneNumber { get; set; }
+        }
+
         public new IQueryable<object> All()
         {
-            return base.All()
-                       .Select(x => new
+            var temp = base.All()
+                       .Select(x => new TempObject()
                            {
                                StaffingResource = x,
                                PrimaryAddress = x.Addresses.FirstOrDefault(a => a.Primary),
                                PrimaryPhoneNumber = x.PhoneNumbers.FirstOrDefault(p => p.Primary)
-                           })
-                       .Select(x => new
+                           });
+            return temp.Select<IEnumerable< TempObject >, IQueryable< StaffingResourceListItem >> (x => new StaffingResourceListItem()
                            {
                                x.StaffingResource.Id,
                                FullName =
